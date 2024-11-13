@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.danield</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1</version>
+    <name>Demo</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <javafx.version>17.0.2</javafx.version>
+        <mainClassName>com.danield.demo/com.danield.demo.App</mainClassName>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <profiles>
+
+        <profile>
+            <id>android</id>
+            <properties>
+                <gluonfx.target>android</gluonfx.target>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>ios</id>
+            <properties>
+                <gluonfx.target>ios</gluonfx.target>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>windows</id>
+            <properties>
+                <jlink.target>windows</jlink.target>
+                <jpackage.icon>DemoIcon.ico</jpackage.icon>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>linux</id>
+            <properties>
+                <jlink.target>linux</jlink.target>
+                <maven.compiler.source>11</maven.compiler.source>
+                <maven.compiler.target>11</maven.compiler.target>
+                <jpackage.icon>DemoIcon.ico</jpackage.icon>
+            </properties>
+        </profile>
+
+    </profiles>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+            </plugin>
+
+            <plugin> <!-- Building an Installer for Windows using jlink and jpackage -->
+                     <!-- Usage: mvn clean -Pwindows javafx:jlink jpackage:jpackage-->
+                <groupId>org.panteleyev</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <name>${project.name}</name>
+                    <appVersion>${project.version}</appVersion>
+                    <vendor>${project.groupId}</vendor>
+                    <module>${mainClassName}</module>
+                    <copyright>Daniel D</copyright>
+                    <icon>${jpackage.icon}</icon>
+                    <licenseFile>LICENSE</licenseFile>
+                    <destination>target/dist</destination>
+                    <runtimeImage>target/${project.name}-${project.version}-${jlink.target}</runtimeImage>
+                    <winDirChooser>true</winDirChooser> <!-- Choose Installation Location -->
+                    <winMenu>true</winMenu> <!-- Start Menu Entry -->
+                    <winMenuGroup>${project.name}</winMenuGroup>
+                    <winShortcut>true</winShortcut> <!-- Desktop Shortcut -->
+
+
+                    <linuxPackageName>${project.name}</linuxPackageName>
+                    <linuxShortcut>true</linuxShortcut>
+                    <linuxAppCategory>Utilities</linuxAppCategory>
+                    <linuxMenuGroup>Utilities</linuxMenuGroup>
+
+                    <javaOptions>
+                        <option>-Dfile.encoding=UTF-8</option>
+                    </javaOptions>
+                </configuration>
+            </plugin>
+
+            <plugin> <!-- Building for Windows or Linux using jlink -->
+                     <!-- Usage: mvn clean -Pwindows javafx:jlink -->
+                     <!-- Usage: mvn clean -Plinux javafx:jlink -->
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <stripDebug>true</stripDebug>
+                    <compress>2</compress>
+                    <noHeaderFiles>true</noHeaderFiles>
+                    <noManPages>true</noManPages>
+                    <launcher>run</launcher>
+                    <jlinkImageName>${project.name}-${project.version}-${jlink.target}</jlinkImageName>
+                    <jlinkZipName>${project.name}-${project.version}-${jlink.target}</jlinkZipName>
+                    <mainClass>${mainClassName}</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <!-- Default configuration for running on Windows or Linux -->
+                        <!-- Usage: mvn clean javafx:run -->
+                        <id>default-cli</id>
+                        <configuration>
+                            <mainClass>${mainClassName}</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+    
+</project>
