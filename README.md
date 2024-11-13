@@ -16,13 +16,6 @@ Move Me Cursor is a Standalone JavaFX Application build using Maven 3.9.9 .</br>
 3. Navigate to the "bin" directory
 4. Double-click "run.bat"
 
-### <b>On UBUNTU/DEBIAN LINUX without Installer</b>
-
-1. Download the latest zip archive "Move Me Cursor-x.x.x-linux.zip"
-2. Unzip "Move Me Cursor-x.x.x-linux.zip"
-3. Navigate to the "bin" directory
-4. Open bash and type "./run"
-
 ## <b>Dependencies</b>
 
 * Java 17
@@ -33,7 +26,6 @@ Move Me Cursor is a Standalone JavaFX Application build using Maven 3.9.9 .</br>
 
     * Plugins:</br>
         * maven-compiler-plugin</br>
-        * jpackage-maven-plugin</br>
         * javafx-maven-plugin</br>
 
 ## <b>How to build</b>
@@ -42,15 +34,9 @@ Move Me Cursor is a Standalone JavaFX Application build using Maven 3.9.9 .</br>
 
 ### <b>Windows Portable Zip Archive</b>
 ````
-mvn clean -Pwindows javafx:jlink
+mvn clean javafx:jlink
 ````
 Output: "Move Me Cursor/target/Move Me Cursor-x.x.x-windows.zip"
-
-### <b>Ubuntu/Debian Linux Portable Zip Archive</b>
-````
-mvn clean -Plinux javafx:jlink
-````
-Output: "Move Me Cursor/target/Move Me Cursor-x.x.x-linux.zip"
 
 ## <b>Help</b>
 
