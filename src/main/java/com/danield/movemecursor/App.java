@@ -1,4 +1,4 @@
-package com.danield.demo;
+package com.danield.movemecursor;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,9 +16,9 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
-    public static final String TITLE = "Demo";
-    public static final double MIN_HEIGHT = 450.0;
-    public static final double MIN_WIDTH = 475.0;
+    public static final String TITLE = "Move Me Cursor";
+    public static final double MIN_HEIGHT = 80.0;
+    public static final double MIN_WIDTH = 300.0;
     public static final String VERSION = "0.0.1";
 
     @Override
@@ -30,6 +30,7 @@ public class App extends Application {
         stage.setTitle(String.format("%s %s", TITLE, VERSION));
         stage.setMinHeight(MIN_HEIGHT);
         stage.setMinWidth(MIN_WIDTH);
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
         

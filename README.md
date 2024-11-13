@@ -1,28 +1,25 @@
-# <b>Demo</b>
+# <b>Move Me Cursor</b>
 
 ## <b>Description</b>
 
-ONE_SENTENCE_DESCRIPTION.</br>
-Demo is a Standalone JavaFX Application build using Maven 3.8.1 .</br>
+Have you ever had home office? You know the struggle... </br>
+Most companies won't allow you to install third party software nor run executables... </br>
+That's why this little helper is born using Java instead of Cpp... </br>
+Move Me Cursor is a Standalone JavaFX Application build using Maven 3.9.9 .</br>
 
 ## <b>Getting Started</b>
 
-### <b>On WINDOWS using Installer (recommended)</b>
-
-1. Download the latest installer "Demo-x.x.x.exe"
-2. Double-click it and follow the instructions
-
 ### <b>On WINDOWS without Installer</b>
 
-1. Download the lastest zip archive "Demo-x.x.x-windows.zip"
-2. Unzip "Demo-x.x.x-windows.zip"
+1. Download the lastest zip archive "Move Me Cursor-x.x.x-windows.zip"
+2. Unzip "Move Me Cursor-x.x.x-windows.zip"
 3. Navigate to the "bin" directory
 4. Double-click "run.bat"
 
-### <b>On LINUX without Installer</b>
+### <b>On UBUNTU/DEBIAN LINUX without Installer</b>
 
-1. Download the latest zip archive "Demo-x.x.x-linux.zip"
-2. Unzip "Demo-x.x.x-linux.zip"
+1. Download the latest zip archive "Move Me Cursor-x.x.x-linux.zip"
+2. Unzip "Move Me Cursor-x.x.x-linux.zip"
 3. Navigate to the "bin" directory
 4. Open bash and type "./run"
 
@@ -30,36 +27,30 @@ Demo is a Standalone JavaFX Application build using Maven 3.8.1 .</br>
 
 * Java 17
 
-* JavaFX 17
+    * JavaFX 17
 
-* Maven Plugins:</br>
-    * maven-compiler-plugin</br>
-    * jpackage-maven-plugin</br>
-    * javafx-maven-plugin</br>
-    </br>
-* WiX 3.0 or greater (requiered by jpackage)
+* Maven 3.9.7 or greater
+
+    * Plugins:</br>
+        * maven-compiler-plugin</br>
+        * jpackage-maven-plugin</br>
+        * javafx-maven-plugin</br>
 
 ## <b>How to build</b>
 
-<b>IMPORTANT:</b> to build from source you need to install Java 17 and WiX 3 on your machine, otherwise building will fail.
-
-### <b>Windows Installer</b>
-````
-mvn clean -Pwindows javafx:jlink jpackage:jpackage
-````
-Output: "Demo/target/dist/Demo-x.x.x.exe"
+<b>IMPORTANT:</b> to build from source you need to install the required build dependencies on your machine.
 
 ### <b>Windows Portable Zip Archive</b>
 ````
 mvn clean -Pwindows javafx:jlink
 ````
-Output: "Demo/target/Demo-x.x.x-windows.exe"
+Output: "Move Me Cursor/target/Move Me Cursor-x.x.x-windows.zip"
 
-### <b>Linux Portable Zip Archive</b>
+### <b>Ubuntu/Debian Linux Portable Zip Archive</b>
 ````
 mvn clean -Plinux javafx:jlink
 ````
-Output: "Demo/target/Demo-x.x.x-linux.exe"
+Output: "Move Me Cursor/target/Move Me Cursor-x.x.x-linux.zip"
 
 ## <b>Help</b>
 
@@ -72,12 +63,7 @@ Daniel D
 
 ## <b>Version History</b>
 
-* 1.1.0
-    * WHAT CHANGED/ADDED
-    * WHAT CHANGED/ADDED
-<br><br>
-
-* 1.0.0
+* 0.0.1
     * Initial Release
 
 ## <b>License</b>
