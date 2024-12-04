@@ -2,10 +2,9 @@
 
 ## <b>Description</b>
 
-Have you ever had home office? You know the struggle... </br>
-Most companies won't allow you to install third party software nor run executables... </br>
-That's why this little helper is born using Java instead of Cpp... </br>
-Move Me Cursor is a Standalone JavaFX Application build using Maven 3.9.9 .</br>
+Most companies won't allow you to install third party software nor run executables.</br>
+That's why this little helper is born using Java instead of Cpp.</br>
+Move Me Cursor is a Standalone JavaFX Application build using Maven.</br>
 
 ## <b>Getting Started</b>
 
@@ -16,7 +15,7 @@ Move Me Cursor is a Standalone JavaFX Application build using Maven 3.9.9 .</br>
 3. Navigate to the "bin" directory
 4. Double-click "run.bat"
 
-## <b>Dependencies</b>
+## <b>Build Dependencies</b>
 
 * Java 17
 
@@ -24,7 +23,7 @@ Move Me Cursor is a Standalone JavaFX Application build using Maven 3.9.9 .</br>
 
 * Maven 3.9.7 or greater
 
-    * Plugins:</br>
+    * Maven Plugins:</br>
         * maven-compiler-plugin</br>
         * javafx-maven-plugin</br>
 
@@ -48,6 +47,11 @@ Daniel D
 [@Github](https://github.com/Daniel446f6c/)
 
 ## <b>Version History</b>
+
+* 0.0.2
+    * Increased Movement Interval
+    * Slightly Smaller Window
+    * Bigger Button
 
 * 0.0.1
     * Initial Release

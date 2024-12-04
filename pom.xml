@@ -4,7 +4,7 @@
 
     <groupId>com.danield</groupId>
     <artifactId>MoveMeCursor</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>Move Me Cursor</name>
 
     <properties>

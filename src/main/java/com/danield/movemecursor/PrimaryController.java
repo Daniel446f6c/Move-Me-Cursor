@@ -1,27 +1,31 @@
 package com.danield.movemecursor;
 
 import javafx.scene.control.Button;
-
-import java.io.IOException;
-
 import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
 
+/**
+ * Provides the logic behind the {@code PrimaryView.fxml} View.
+ * @author Daniel D
+ */
 public class PrimaryController {
 
     @FXML private Button btnStart;
+    private Thread bgWorker = new Thread();
 
-    Thread thread = new Thread(new CursorMover());
-
-    @FXML
-    private void startButtonPressed() throws IOException {
+    /**
+     * Event handler bind to the Start Button's {@code onAction} event.
+     * @param event : the event
+     */
+    public void startButtonPressed(ActionEvent event) {
         
-        if (thread.isAlive()) {
-            thread.interrupt();
+        if (bgWorker.isAlive()) {
+            bgWorker.interrupt();
             btnStart.setText("Start");
         }
         else {
-            thread = new Thread(new CursorMover());
-            thread.start();
+            bgWorker = new Thread(new CursorMover());
+            bgWorker.start();
             btnStart.setText("Stop");
         }
 

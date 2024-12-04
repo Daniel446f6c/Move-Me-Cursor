@@ -2,18 +2,17 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.danield.movemecursor.PrimaryController">
+<HBox alignment="CENTER" spacing="5.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.danield.movemecursor.PrimaryController">
    <children>
-      <Button id="start-button" fx:id="btnStart" onAction="#startButtonPressed" text="Start" VBox.vgrow="ALWAYS">
+      <Button id="start-button" fx:id="btnStart" onAction="#startButtonPressed" text="Start" prefWidth="212">
          <font>
-            <Font size="18.0" />
+            <Font size="16.0" />
          </font>
       </Button>
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-</VBox>
+</HBox>

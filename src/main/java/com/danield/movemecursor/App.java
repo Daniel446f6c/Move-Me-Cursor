@@ -10,16 +10,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * The {@code App} class represents the entry point of the Application.
+ * Represents the entry point of the Application.
  * @author Daniel D
  */
 public class App extends Application {
 
     private static Scene scene;
-    public static final String TITLE = "Move Me Cursor";
-    public static final double MIN_HEIGHT = 80.0;
-    public static final double MIN_WIDTH = 300.0;
-    public static final String VERSION = "0.0.1";
+    public static final String TITLE = "MMC";
+    public static final double MIN_HEIGHT = 48.0;
+    public static final double MIN_WIDTH = 228.0;
+    public static final String VERSION = "0.0.2";
 
     @Override
     public void start(Stage stage) throws Exception {
