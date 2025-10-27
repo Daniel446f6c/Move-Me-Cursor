@@ -26,7 +26,7 @@ public class CursorMover implements Runnable {
                     Thread.sleep(rnd.nextInt(4000, 8001));
                 }
             } catch (InterruptedException e) { /* Exit and Terminate Thread */ }
-        } catch (AWTException e) {}
+        } catch (AWTException ignored) {}
     }
 
 }

@@ -2,13 +2,11 @@
 
 ## <b>Description</b>
 
-Most companies won't allow you to install third party software nor run executables.</br>
-That's why this little helper is born using Java instead of Cpp.</br>
-Move Me Cursor is a Standalone JavaFX Application build using Maven.</br>
+A small mouse mover.</br>
 
 ## <b>Getting Started</b>
 
-### <b>On WINDOWS without Installer</b>
+### <b>On WINDOWS</b>
 
 1. Download the lastest zip archive "Move Me Cursor-x.x.x-windows.zip"
 2. Unzip "Move Me Cursor-x.x.x-windows.zip"
@@ -17,15 +15,9 @@ Move Me Cursor is a Standalone JavaFX Application build using Maven.</br>
 
 ## <b>Build Dependencies</b>
 
-* Java 17
-
-    * JavaFX 17
+* JDK 17
 
 * Maven 3.9.7 or greater
-
-    * Maven Plugins:</br>
-        * maven-compiler-plugin</br>
-        * javafx-maven-plugin</br>
 
 ## <b>How to build</b>
 

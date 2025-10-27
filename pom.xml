@@ -9,8 +9,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <project.jdk.version>17</project.jdk.version>
         <javafx.version>17.0.13</javafx.version>
         <mainClassName>com.danield.movemecursor/com.danield.movemecursor.App</mainClassName>
     </properties>
@@ -38,6 +37,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
+                <configuration>
+                    <source>${project.jdk.version}</source>
+                    <target>${project.jdk.version}</target>
+                </configuration>
             </plugin>
 
             <plugin> <!-- Building for Windows using jlink -->

@@ -11,7 +11,7 @@ import javafx.event.ActionEvent;
 public class PrimaryController {
 
     @FXML private Button btnStart;
-    private Thread bgWorker = new Thread();
+    private Thread bgWorker;
 
     /**
      * Event handler bind to the Start Button's {@code onAction} event.
@@ -19,7 +19,7 @@ public class PrimaryController {
      */
     public void startButtonPressed(ActionEvent event) {
         
-        if (bgWorker.isAlive()) {
+        if (bgWorker != null && bgWorker.isAlive()) {
             bgWorker.interrupt();
             btnStart.setText("Start");
         }
