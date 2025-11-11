@@ -20,7 +20,7 @@ public class App extends Application {
     public static final double MIN_HEIGHT = 85.0;
     public static final double MIN_WIDTH = 230.0;
     public static final String VERSION = "0.0.2";
-    public static final String ICON_PATH = "DemoIcon.png";
+    public static final String ICON_PATH = "Icon.png";
 
     @Override
     public void start(Stage stage) {
