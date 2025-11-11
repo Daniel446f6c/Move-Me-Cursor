@@ -21,7 +21,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <CheckBox fx:id="ckbxTimer" mnemonicParsing="false" onAction="#timerCheckboxPressed" prefWidth="120.0" text="Stop after" GridPane.rowIndex="1" />
+      <CheckBox fx:id="ckbxTimer" mnemonicParsing="false" prefWidth="120.0" text="Stop after" GridPane.rowIndex="1" />
       <ChoiceBox fx:id="choiceboxDurationSelect" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label fx:id="lblTimeLeft" text="00:00:00" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
          <GridPane.margin>
