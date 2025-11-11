@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Represents the entry point of the Application.
- * @author Daniel D
  */
 public class App extends Application {
 
