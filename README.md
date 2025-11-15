@@ -40,6 +40,10 @@ Daniel D
 
 ## <b>Version History</b>
 
+* 0.0.3
+    * Select Duration
+    * Cosmetic Changes
+
 * 0.0.2
     * Increased Movement Interval
     * Slightly Smaller Window
