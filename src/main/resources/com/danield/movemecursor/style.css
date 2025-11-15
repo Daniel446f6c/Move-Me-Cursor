@@ -1,0 +1,50 @@
+.root {
+    -fx-background-color: grey;
+}
+
+.clickable,
+.clickable .mark,
+.clickable .box,
+.clickable .context-menu,
+.clickable > .label,
+.clickable .menu-item,
+.clickable .menu-item > .label {
+    -fx-font-family: "System";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-color: #5c5c5c;
+    -fx-text-fill: rgb(150, 180, 255);
+    -fx-background-radius: 8px;
+    -fx-mark-color: rgb(150, 180, 255);
+}
+
+.clickable:hover,
+.clickable:hover .mark,
+.clickable:hover .box,
+.clickable:hover .context-menu,
+.clickable:hover > .label,
+.clickable:hover .menu-item,
+.clickable:hover .menu-item > .label {
+    -fx-background-color: rgb(150, 180, 255);
+    -fx-text-fill: #5c5c5c;
+    -fx-mark-color: #5c5c5c;
+}
+
+.check-box:selected .mark,
+.check-box:selected:hover .box {
+    -fx-background-color: rgb(150, 180, 255);
+}
+
+.check-box:selected .box,
+.check-box:selected:hover .mark {
+    -fx-background-color: #5c5c5c;
+}
+
+#btnStart {
+    -fx-font-size: 16px;
+}
+
+#lblTimeLeft {
+    -fx-font-weight: bold;
+    -fx-text-fill: rgb(73, 46, 255);
+}
